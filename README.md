@@ -1,23 +1,25 @@
 🧠 OOP Project – Office Simulation in Python
 This project showcases core Object-Oriented Programming (OOP) concepts using Python through a simulation of an office environment. It demonstrates how classes interact to model real-life objects such as employees and their vehicles, and how lateness, refueling, and salary management are handled.
 
-📁 Project Structure
-![OOP Lab_page-0011](https://github.com/user-attachments/assets/0904bce9-eb0f-40b5-b7bc-43f3a7e2ea90)
-![OOP Lab_page-0010](https://github.com/user-attachments/assets/dc0e1eba-ea49-4eba-ae4a-4fbf9393eef8)
-![OOP Lab_page-0009](https://github.com/user-attachments/assets/86bf2aef-9d18-4e3b-99a0-db3fcb6de266)
-![OOP Lab_page-0008](https://github.com/user-attachments/assets/61937eb3-f0fd-45d1-bdbc-1c5fb3fc5d74)
-![OOP Lab_page-0007](https://github.com/user-attachments/assets/443fef10-0e45-42c9-8a7e-2dc8b17e6f93)
-![OOP Lab_page-0006](https://github.com/user-attachments/assets/b3d6ebec-f1aa-458d-b0e0-01a93cd315d6)
-![OOP Lab_page-0005](https://github.com/user-attachments/assets/f8af2de1-87ac-4574-b591-f2f27eaa8432)
+# Project Structure
+![OOP Lab_page-0011](https://github.com/user-attachments/assets/33f4f1de-3baf-4dc9-b173-a35035dc5464)
+![OOP Lab_page-0010](https://github.com/user-attachments/assets/5b7dbb99-e498-4f1d-88d5-a6e83ee72a6a)
+![OOP Lab_page-0009](https://github.com/user-attachments/assets/eda5afbb-c97d-423e-98cf-6981b3afe3d7)
+![OOP Lab_page-0008](https://github.com/user-attachments/assets/89ef8ea8-4362-4031-bee6-ed6f02610e13)
+![OOP Lab_page-0007](https://github.com/user-attachments/assets/d5304aab-def3-4a25-bd20-12be8e70aa3d)
+![OOP Lab_page-0006](https://github.com/user-attachments/assets/63559f4c-4b69-4250-bf4b-c426693bf967)
+![OOP Lab_page-0005](https://github.com/user-attachments/assets/27e6a43a-1cdc-44b6-b37e-9ee15095e629)
 
-🚀 Key Features:
+
+
+# Key Features:
 🚗 Driving simulation with fuel and velocity tracking
 ⛽ Refueling capability
 ⏱️ Lateness detection based on commute time and speed
 👥 Employee management: Hiring and firing functionality
 💵 Salary adjustments: Reward or deduct salary based on punctuality
 
-🧪 Example Usage
+# Example Usage
 
 from office import Office
 from employee import Employee
@@ -77,18 +79,3 @@ print(iti.fire(empId=5))
 print(f"Number of employees after firing: {Office.employeesNum}")
 
 print(f"{samy.name} is an employee who works at {iti.name}. He commutes daily (except weekends) using his {samy.car.name} car.")
-
-📤 Sample Output
-
-You have arrived
-You're not Late
-samy is rewarded, his new salary after reward is 10010
-zedan is hired
-Number of employees after hiring: 3
-Current employee list:
-samy with ID: 2
-aya with ID: 5
-zedan with ID: 10
-Employee with ID 5 has been fired.
-Number of employees after firing: 2
-samy is an employee who works at ITI-Smart-Village. He commutes daily (except weekends) using his Fiat 128 car.
