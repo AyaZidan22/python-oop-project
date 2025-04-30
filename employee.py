@@ -25,6 +25,7 @@ class Employee(Person):
     
     def drive(self,distance,velocity):
         self.distanceToWork=distance
+        self.car.cVelocity=velocity
         self.car.run(velocity,distance)
     
     def refuel(self,gasAmount=100):

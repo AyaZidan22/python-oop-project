@@ -1,5 +1,4 @@
 from office import Office
-from person import Person
 from employee import Employee
 from car import Car
 
@@ -37,10 +36,10 @@ zedan = Employee(
     distanceToWork=20,
 )
 samy.refuel()
-samy.drive(distance=20.0,velocity=60.0)
+samy.drive(distance=20.0,velocity=60)
 
 iti=Office("ITI-Smart-Village",[samy,aya])
-print(iti.check_lateness(empId=2,moveHour=6))
+print(iti.check_lateness(empId=2,moveHour="08:40"))
 iti.hire(zedan)
 print(f"Number of employees after: {Office.employeesNum}")
 print("The employees list is now:")

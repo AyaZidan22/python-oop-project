@@ -14,10 +14,9 @@ class Car():
                 distance-=10
                 self.fuelRate-=self.fuelRate*0.1
                   
-        self.stop(distance,velocity)        
+        self.stop(distance)        
         
-    def stop(self,distance,velocity):
-        self.cVelocity=velocity
+    def stop(self,distance):
         self.velocity=0
         if distance==0:
             print( "You have arrived")

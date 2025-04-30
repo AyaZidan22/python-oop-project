@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 class Office:
     employeesNum=0
     def __init__(self,name,employees):
@@ -31,7 +33,7 @@ class Office:
     def check_lateness(self,empId,moveHour):
         for employee in self.employees:
             if employee.id==empId:
-                lateness_result = Office.calculate_lateness(9, moveHour, employee.distanceToWork, employee.car.cVelocity)
+                lateness_result = Office.calculate_lateness("09:00", moveHour, employee.distanceToWork, employee.car.cVelocity)
                 if lateness_result is None:
                     return "Invalid velocity; lateness could not be checked."
                 elif lateness_result:
@@ -55,16 +57,20 @@ class Office:
                 return f"{employee.name} is rewarded, his new salary after reward is {employee.salary}"
 
     @staticmethod
-    def calculate_lateness (targetHour , moveHour, distance, velocity):
+    def calculate_lateness (targetHourStr , moveHourStr, distance, velocity):
+        moveHour = datetime.strptime(moveHourStr, "%H:%M")
+        targetHour = datetime.strptime(targetHourStr, "%H:%M")
+
         if velocity <= 0 or velocity > 200:
             return None 
-        targetHour=9
-        time = targetHour - moveHour
-        expected_time = distance / velocity
-        if expected_time<=time:
-            return 0
+        
+        timeAvaliable =targetHour - moveHour
+        travelDuration = timedelta(hours=distance / velocity)
+
+        if travelDuration<=timeAvaliable:
+            return 0 #not late
         else:
-            return 1   
+            return 1  #late 
 
     @classmethod
     def change_emps_num(cls, num):
